@@ -2,19 +2,24 @@
   "name": "todo-cohort",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "next",
+    "dev": "node server.js",
     "build": "next build",
-    "start": "next start"
+    "start": "cross-env NODE_ENV=production node server.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "express": "^4.16.4",
+    "isomorphic-unfetch": "^3.0.0",
     "next": "^8.0.3",
     "react": "^16.8.5",
     "react-dom": "^16.8.5"
+  },
+  "devDependencies": {
+    "cross-env": "^5.2.0"
   }
 }
